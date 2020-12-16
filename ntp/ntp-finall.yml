@@ -1,0 +1,15 @@
+- hosts: vm-hosts
+  remote_user: reza
+  become: True
+  vars:
+    ntp_server: [NTP_SERVER_IPs or NTP_SERVER_DOMAINs]
+  tasks:
+  - name: Install NTP
+    apt: name=ntp update_cache=yes
+  - name: Copy the ntp.conf template file
+    template: src=ntp.config.j2 dest=/etc/ntp.conf
+    notify: 
+      - restart ntp
+  handlers:
+  - name: restart ntp
+    service: name=ntp state=restarted

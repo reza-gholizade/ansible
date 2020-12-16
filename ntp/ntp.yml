@@ -1,0 +1,7 @@
+---
+- hosts: vm-hosts
+  remote_user: Reza
+  become: True
+  tasks:
+  - name: Install NTP
+    apt: name=ntp update-cache=yes
