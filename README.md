@@ -9,4 +9,4 @@ create inventory like file " inv " in this repository
 3- at last run blew command:
 ``` 
 ~$ cd ntp 
-~$ ansible-playbook -i inv ntp-finall.yml```
+~$ ansible-playbook -i inv ntp-finall.yml
