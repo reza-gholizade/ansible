@@ -11,3 +11,8 @@
 ~$ cd ntp 
 ~$ ansible-playbook -i inv ntp-finall.yml
 ```
+# zabbix-agent
+1- create inventory like file " inv " in this repository
+
+2- change hosts value in file ntp/ntp-finall.yml to your host group
+
